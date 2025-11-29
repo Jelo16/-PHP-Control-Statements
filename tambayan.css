@@ -1,0 +1,83 @@
+:root{
+--sky-blue: #7ec8ff;
+--deep-blue: #2b8ed6;
+--white: #ffffff;
+--muted: #f3f8ff;
+}
+
+
+*{box-sizing:border-box;font-family: 'Segoe UI', Roboto, Arial, sans-serif;margin:0;padding:0}
+html,body{height:100%}
+body{
+background: linear-gradient(180deg,var(--muted) 0%, var(--white) 50%);
+color:#123;
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+
+.site-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 24px;
+background: linear-gradient(90deg,var(--white), rgba(255,255,255,0.7));
+box-shadow: 0 2px 6px rgba(43,142,214,0.08);
+}
+.brand{
+font-size:1.4rem;
+font-weight:700;
+color:var(--deep-blue);
+}
+
+
+.main-nav{
+display:flex;gap:10px;align-items:center;
+}
+
+
+.nav-button{
+text-decoration:none;
+padding:10px 14px;
+border-radius:999px;
+background: linear-gradient(180deg,var(--sky-blue), var(--deep-blue));
+color:var(--white);
+font-weight:600;
+box-shadow: 0 4px 10px rgba(43,142,214,0.15);
+}
+
+
+.container{flex:1;padding:28px;max-width:980px;margin:0 auto}
+.hero{padding:28px 16px;text-align:center}
+.hero h1{font-size:2rem;color:var(--deep-blue);margin-bottom:8px}
+.hero p{color:#245;opacity:0.9}
+
+
+.content, .menu-list, .contact-form{margin-top:18px;padding:16px;background:rgba(255,255,255,0.8);border-radius:12px}
+.menu-item{padding:12px 0;border-bottom:1px solid rgba(43,142,214,0.06)}
+.menu-item h3{margin-bottom:6px}
+
+
+.cta{
+display:inline-block;padding:10px 16px;border-radius:10px;border:none;margin-top:10px;font-weight:700;
+background:var(--deep-blue);color:var(--white);cursor:pointer
+}
+
+
+.site-footer{padding:18px;text-align:center;color:#345;background:transparent}
+
+
+/* cloud accents */
+.hero::before{
+content:"";position:absolute;left:50%;transform:translateX(-50%);top:60px;width:360px;height:120px;border-radius:50%;
+background:radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9), rgba(255,255,255,0.7) 40%, rgba(0,0,0,0) 60%);
+filter:blur(14px);opacity:0.9;
+}
+
+
+/* responsive */
+@media(max-width:600px){
+.nav-button{padding:8px 10px;font-size:0.9rem}
+.hero h1{font-size:1.4rem}
+}
