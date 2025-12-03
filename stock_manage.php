@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);  // 1. Strict types turned on
 
-// 2. Multidimensional array for products (keys = product name, values = price + stock)
+// Multidimensional array for products (keys = product name, values = price + stock)
 $storeProducts = [
     "Arabica Coffee Beans"     => [ "price" => 260.00, "stock" => 9 ],
     "Robusta Coffee Beans"     => [ "price" => 180.00, "stock" => 15 ],
@@ -13,20 +13,20 @@ $storeProducts = [
     "Milk (Liter)"             => [ "price" => 75.00,  "stock" => 20 ],
 ];
 
-// 3. Global tax rate variable
+// Global tax rate variable
 $tax_rate = 12; // 12% VAT
 
-// 4. Function — reorder message
+// Function — reorder message
 function get_reorder_message(int $currentStock): string {
     return ($currentStock < 10) ? "Yes" : "No"; // 5. Ternary operator
 }
 
-// 6. Function — total stock value
+// Function — total stock value
 function get_total_value(float $price, int $quantity): float {
     return $price * $quantity; // 7.
 }
 
-// 8. Function — total tax due
+// Function — total tax due
 function get_tax_due(float $price, int $quantity, int $tax = 0): float {
     return ($price * $quantity) * ($tax / 100); // 9.
 }
@@ -39,7 +39,7 @@ function get_tax_due(float $price, int $quantity, int $tax = 0): float {
     <title>Store Stock Monitoring</title>
 
     <!-- Load External CSS -->
-    <link rel="stylesheet" href="stock_style.css">
+    <link rel="stylesheet" href="stock_design.css">
 </head>
 <body>
 
